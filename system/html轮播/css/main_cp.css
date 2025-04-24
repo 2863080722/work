@@ -1,0 +1,54 @@
+
+        .container {
+            width: 1800px;
+            height: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2), 0 10px 10px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+            background-color: rgba(255, 255, 255, 0.5);
+            transition: box-shadow 0.3s ease;
+        }
+
+        .container:hover {
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3), 0 15px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        @supports not (backdrop-filter: blur(10px)) {
+            .container {
+                background-color: rgba(0, 50, 128, 0.3); /* 如果浏览器不支持backdrop-filter，则使用原始背景色 */
+            }
+        }
+        .container_up{
+            height:550px;
+        }
+        .container_down{
+            height: 150px;
+            margin-bottom: 20px;
+        }
+        .video_area {
+            /*position: static;*/
+            width: 500px;
+            height: 500px;
+            /*padding-bottom: 100%;*/
+            margin-left:25px;
+            margin-top:15px;
+            /*border:1px solid red;*/
+            float:left;
+        }
+        .video_profile {
+            /*position:static;*/
+            float:right;
+            width: 500px;
+            height: 500px;
+            margin-right: 25px;
+            margin-top:15px;
+        }
+        .container::after {
+            content: "";
+            display: table;
+            clear: both;
+        }

@@ -1,0 +1,39 @@
+        #videoCarousel {
+        position: static;
+        width: 100%;
+        height: 500px;
+        /*transform: none; */
+        }
+
+        .carousel-item video {
+            height: 500px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2), 0 10px 10px rgba(0, 0, 0, 0.1); /* 添加阴影效果 */
+        }
+        .carousel-video {
+            width: 100%;
+            transition: transform 0.5s ease;
+        }
+
+        .carousel-item.active .carousel-video {
+            transform: scale(1.2);
+        }
+
+        .carousel-control-prev,
+        .carousel-control-next {
+            position: absolute;
+            top: 45%;
+            transform: translateY(-50%);
+        }
+
+        .carousel-control-prev {
+            left: 60px;
+        }
+
+        .carousel-control-next {
+            right: 620px;
+        }
+
+        .carousel-item a {
+            font-size: medium;
+            color: white;
+        }

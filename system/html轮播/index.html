@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>video carousel</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/tab_button.css">
+    <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="css/video_lunbo.css">
+    <link rel="stylesheet" href="css/main_cp.css">
+</head>
+<style>
+    body {
+            margin: 0;
+            /*background-color: rgba(50, 60, 128, 0.8);*/
+            background-image: url('fig/background_fig.jpg');
+            background-size: cover; /* 覆盖 */
+            background-repeat: no-repeat; /* 防重 */
+            background-position: center; /* 居中 */
+            background-attachment: fixed; /* 背景图片不乱滚 */
+        }
+</style>
+<body>
+
+    <div class="dingbucaidan menu_height">
+
+        <div class="logo menu_height">
+<!--            <img src="fig/logo_img.png" alt="logo_img" />-->
+           <a href="#" style="text-decoration: none;">
+            <h1>Key News</h1>
+           </a> 
+        </div>
+        <div class="bangzhuzhongxin menu_height">
+            <a href="#" style="text-decoration: none;">
+                <h2>帮助中心</h2>
+            </a>
+        </div>
+        <div class="lianxiwomen menu_height menu_text">
+            <a href="#" style="text-decoration: none;">
+                <h2>联系我们</h2>
+            </a>
+        </div>
+        <div class="login_out menu_height menu_text">
+            <a href="../login and register/login.html" style="text-decoration: none;">
+                <h2>登录</h2>
+            </a>
+        </div>
+        <div class="yuyanqiehuan menu_height menu_text">
+            <a href="#" style="text-decoration: none;">
+                <h2>语言切换</h2>
+            </a>
+            <div class="dropdown-content">
+                <a href="#" style="text-decoration: none;">中文</a>
+                <a href="#" style="text-decoration: none;">英文</a>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="container">
+        <div class="container_up">
+            <div class="video_area">
+
+                <div id="videoCarousel" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#videoCarousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#videoCarousel" data-slide-to="1"></li>
+                        <li data-target="#videoCarousel" data-slide-to="2"></li>
+                        <li data-target="#videoCarousel" data-slide-to="3"></li>
+                        <li data-target="#videoCarousel" data-slide-to="4"></li>
+                        <li data-target="#videoCarousel" data-slide-to="5"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <video class="carousel-video" controls autoplay muted loop>
+                                <source src="video/video1.mp4" type="video/mp4">
+                            </video>
+                            <div class="video-description" style="display: none;"><a>这是视频1的描述。</a></div>
+                        </div>
+
+                        <div class="carousel-item">
+                            <video class="carousel-video" controls autoplay muted loop>
+                                <source src="video/video2.mp4" type="video/mp4">
+                            </video>
+                            <div class="video-description" style="display: none;"><a>这是视频2的描述。</a></div>
+                        </div>
+
+
+                        <div class="carousel-item">
+                            <video class="carousel-video" controls autoplay muted loop>
+                                <source src="video/video3.mp4" type="video/mp4">
+                            </video>
+                            <div class="video-description" style="display: none;"><a>这是视频3的描述。</a></div>
+                        </div>
+
+                        <div class="carousel-item">
+                            <video class="carousel-video" controls autoplay muted loop>
+                                <source src="video/video4.mp4" type="video/mp4">
+                            </video>
+                            <div class="video-description" style="display: none;"><a>这是视频4的描述。</a></div>
+                        </div>
+
+                        <div class="carousel-item">
+                            <video class="carousel-video" controls autoplay muted loop>
+                                <source src="video/video5.mp4" type="video/mp4">
+                            </video>
+                            <div class="video-description" style="display: none;"><a>这是视频5的描述。</a></div>
+                        </div>
+
+                        <div class="carousel-item">
+                            <video class="carousel-video" controls autoplay muted loop>
+                                <source src="video/video6.mp4" type="video/mp4">
+                            </video>
+                            <div class="video-description" style="display: none;"><a>这是视频6的描述。</a></div>
+                        </div>
+                    </div>
+
+                    <a class="carousel-control-prev" href="#videoCarousel" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+
+                    <a class="carousel-control-next" href="#videoCarousel" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="video_profile" id="videoprofile">
+                <p id="videoDescription"></p>
+            </div>
+        </div>
+
+        <div class="container_down">
+            <div class="wrapper">
+                <nav>
+                    <input type="radio" name="tab" id="choose_it" checked>
+                    <input type="radio" name="tab" id="detail_inf">
+                    <input type="radio" name="tab" id="help">
+                    <input type="radio" name="tab" id="more">
+
+                    <label for="choose_it" class="choose_it" onclick="location.href='#';">
+                        <a><i class="fa fa-choose_it" aria-hidden="true"></i>选择</a>
+                    </label>
+                    <label for="detail_inf" class="detial_inf" onclick="location.href='#';">
+                        <a><i class="fa fa-detail_inf" aria-hidden="true"></i>详细信息</a>
+                    </label>
+                    <label for="help" class="helf" onclick="location.href='#';">
+                        <a><i class="fa fa-helf" aria-hidden="true"></i>帮助</a>
+                    </label>
+                    <label for="more" class="more" onclick="location.href='#';">
+                        <a><i class="fa fa-more" aria-hidden="true"></i>更多</a>
+                    </label>
+                    <div class="tab"></div>
+                </nav>
+            </div>
+        </div>
+
+
+    </div>
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script></body>
+<script src="lunbojs/zidongbofang.js"></script>
+<script src="lunbojs/daxiaoqiehuan.js"></script>
+</html>

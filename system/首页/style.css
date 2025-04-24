@@ -1,0 +1,100 @@
+html {
+  background-image: url('bk1.jpg'); 
+  height: 100%;
+  width:100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+html,
+body {
+  font-family: "Microsoft YaHei";
+  /* height: 100vh; */
+  display: flex; /* 使用 flexbox 以便更简单地居中 */  
+  /* justify-content: center; */
+  align-items: center; /* 垂直居中 */  
+  margin: 0;  
+  padding: 0;  
+}
+
+
+#slider {
+  position: relative;
+  width:80%;
+  max-width: 1000px;
+  height:80vh;
+  margin: 20px auto;
+  border-radius: 4px;
+}
+
+#slider ul {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  height: 400px;
+  list-style: none;
+  display: flex;  
+  transition: transform 0.5s ease;
+}
+
+
+
+#slider ul li {
+  flex: 0 0 auto;  
+  width: 960px; 
+  height: 300px;
+  margin: 0;  
+  padding: 0;  
+  background-size: cover; 
+  background-position: center;
+  text-indent: -9999px; 
+  position: relative
+}
+
+#slider ul li img {  
+  width: 100%; /* 图片宽度与li相同 */  
+  height: auto; /* 图片高度自动以保持比例 */  
+  display: block; /* 消除图片底部可能存在的间隙 */  
+  margin-left: 30%;
+  position: absolute;
+}  
+
+
+a.control_prev,
+a.control_next {
+  position: absolute;  
+  top: 50%;  
+  transform: translateY(-50%);  
+  z-index: 999;  
+  display: block;  
+  padding: 10px;  
+  background: rgba(0, 0, 0, 0.5); /* 半透明背景 */  
+  color: #fff;  
+  text-decoration: none;  
+  font-weight: bold;  
+  font-size: 20px;  
+  cursor: pointer;  
+}
+
+a.control_prev:hover,
+a.control_next:hover {
+  opacity: 1;
+  -webkit-transition: all 0.2s ease;
+}
+
+a.control_prev {
+  left: 350px;
+  border-radius: 0 2px 2px 0;
+}
+
+a.control_next {
+  right: -350px;
+  border-radius: 2px 0 0 2px;
+}
+
+.slider_option {
+  margin: 10px auto;  
+  width: 160px;  
+  font-size: 16px;  
+  text-align: center; 
+}

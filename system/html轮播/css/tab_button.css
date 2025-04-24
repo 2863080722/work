@@ -1,0 +1,89 @@
+        .container .wrapper{
+            width: 60vw;
+            height:70px;
+            line-height:60px;
+            background-color: aliceblue;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.25);
+            border-radius: 50px;
+            margin-bottom: auto;
+            margin-top: 25px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .wrapper nav{
+            display: flex;
+            position: relative;
+        }
+        .wrapper nav label {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            z-index: 1;
+            cursor: pointer;
+            border-right: 1px  #000;
+            padding-right: 10px;
+            margin-right: 10px;
+
+
+        }
+
+        .wrapper nav label a {
+            display: flex;
+            align-items: center;
+            color: #333;
+            font-size:20px;
+            font-weight:bold;
+            text-decoration:none;
+
+        }
+        .wrapper nav label a i{
+            font-size:25px;
+            margin:0 7px;
+        }
+        .wrapper nav input{
+            display: none;
+        }
+        .wrapper nav .tab{
+            position: absolute;
+            height: 100%;
+            width: 25%;
+            left: 0;
+            bottom: 0;
+            background: linear-gradient(to right,#ff5858,#ff5858);
+            border-radius: 50px;
+            transition: 0.6s cubic-bezier(0.68,-0.55,0.265,1.55);
+        }
+        .wrapper .tab_text{
+            position: static;
+        }
+
+        /*规则*/
+    .wrapper nav label:hover a {
+        color: white
+    }
+
+    .wrapper nav label[for="choose_it"]:hover ~ .tab {
+        left: 0;
+    }
+    .wrapper nav label[for="detail_inf"]:hover ~ .tab {
+        left: 25%;
+    }
+    .wrapper nav label[for="help"]:hover ~ .tab {
+        left: 50%;
+    }
+    .wrapper nav label[for="more"]:hover ~ .tab {
+        left: 75%;
+    }
+
+
+    .wrapper nav label {
+        pointer-events: none;
+    }
+
+
+    .wrapper nav label a,
+    .wrapper nav label i {
+        pointer-events: auto;
+    }
