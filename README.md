@@ -72,23 +72,6 @@
     pip install -r requirements.txt
     ```
 
-### 运行
-
-当前项目似乎缺少一个Web框架（如 Flask 或 Django）来连接后端逻辑和前端页面。要完整运行此项目，您需要：
-
-1.  **实现一个Web服务**:
-    *   选择一个Web框架（例如 Flask）。
-    *   创建一个 `app.py` 文件。
-    *   在 `app.py` 中，导入并实例化 `NewsRecommendationSystem`。
-    *   编写API端点，例如：
-        *   `/login` 和 `/register` 用于处理用户认证。
-        *   `/recommend` 用于接收用户ID并调用推荐系统，返回新闻列表。
-        *   `/` 用于提供主页和其他静态页面。
-
-2.  **整合前端与后端**:
-    *   修改前端的JavaScript代码，使其能够调用您在步骤1中创建的API。
-    *   将从后端获取的新闻数据动态地渲染到前端页面上。
-
 ## 注意事项
 
 *   `keynews.py` 中的模型（如BERT, CLIP）需要从Hugging Face Hub下载预训练权重。首次运行时请确保网络连接正常。
